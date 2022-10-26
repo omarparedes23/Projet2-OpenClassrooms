@@ -37,8 +37,6 @@ header
     display: flex;
     justify-content: space-between;
     margin:30px 30px 40px 30px;
-    
-    
 }
 
 #logo img
@@ -58,8 +56,8 @@ nav ul
 nav li
 {
     margin-right: 15px;
-
 }
+
 
 nav a
 {
@@ -68,10 +66,12 @@ nav a
     font-size: 16px; 
     color: black;
     text-decoration: none;
-    
 }
-nav a:hover {
+
+nav a:hover,nav a:active {
     color:blue;
+    border-top: 5px solid #0c62e7;
+    padding-top: 33px;
 }
 
 /********************************************************/
@@ -90,25 +90,43 @@ nav a:hover {
         
     nav ul
     {
-
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0px;
+        margin-right: 0px;
         margin-top: 25px;
-    
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 400px;        
     }
     
     nav li
     {
-        margin-right: 90px;
+        margin-right: 0px; /*90*/
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        flex: 1;
     }
     
     nav a
     {
         font-family: 'Raleway', sans-serif;    
         font-size: 18px; 
-        
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 40px;
+        padding-right: 50px;
     }    
-    nav a:hover {
-        color:blue;
-    }    
+
+    nav a:not(:hover),nav a:not(:active) {
+        border-bottom: 5px solid rgb(241,241,241);
+    }
+    nav a:hover,nav a:active {
+        color:#3473c9;
+        border-bottom: 5px solid #0962e8;
+        border-top: none;
+    }        
     
 }
 /******************************************************/
@@ -144,7 +162,8 @@ nav a:hover {
   }
   .recherchehebergement input {
     border: 1.1px  #f2f2f2 solid;
-    font-weight: bold;
+    font-weight: bolder;
+    color: #131313;
     padding: 12px 10px;
     width: 170px;
   }  
@@ -233,8 +252,6 @@ nav a:hover {
     font-family: 'Raleway', sans-serif;    
     font-size: 15px;     
 }
-
-
 .filtresunitaire i {
     display: flex;    
     justify-content: center;
@@ -247,8 +264,6 @@ nav a:hover {
     margin-left: -4px;    
     margin-top: -2px;
 }
-
-
 /**********************************************************/
 @media all and (max-width: 768px) {
     #filtres {
@@ -286,6 +301,11 @@ nav a:hover {
 
 }
 /**********************************************************/
+@media all and (min-width: 100px) and (max-width: 360px) {
+    #sectionfiltres {
+        height: 255px;
+    }
+}
 
 #plus {
     margin-left: 0px;
@@ -364,9 +384,6 @@ h2 {
     padding-right: 10px;
 }
 
-
-
-
 .hebergementsunitaire {
     border: 1px #F2F2F2 solid;  
     padding-bottom: 20px;
@@ -389,17 +406,12 @@ h2 {
     width:180px;
     height: 80px;
 }
-
-
 .photounitaire {
     text-align: center;
 }
 .photounitaire img {
     border-radius: 15px 15px 0px 0px;
-
 }
-
-
 /**********************************************************/
 @media all and (max-width: 768px) {
     #hebergementssection {
@@ -432,16 +444,10 @@ h2 {
     }
     #afficherplus {
         margin-left: 40px;
-
     }
-
 }
 
 /**********************************************************/
-
-
-
-
 .auberge {
     font-family: 'Raleway', sans-serif;    
     font-size: 12px; 
@@ -463,9 +469,6 @@ h2 {
 #blackstar1,#blackstar2,#blackstar3,#blackstar4,#blackstar5,#blackstar6,#blackstar7 {
     color: #F2F2F2;
 }
-
-
-
 
 .populairessection {
     display: flex;
@@ -529,7 +532,6 @@ h2 {
     width: 120px;
 }
 
-
 .populairesunitairephotos img {
     border-radius: 15px  0px 0px 15px;
     height: 103px;
@@ -539,19 +541,13 @@ h2 {
     margin-bottom: 0px;    
     margin-left: 0px;
 }
-
-
 /**********************************************************/
 @media all and (min-width: 769px) and (max-width: 813px) {
     #lespluspopulaires i{
         position: absolute;
         right: 0;
-
     }
-
 }
-
-
 
 @media all and (max-width: 768px) {
     .populairessection {
@@ -585,12 +581,7 @@ h2 {
 
 }
 
-
 /**********************************************************/
-
-
-
-
 #activitessection {
     margin: 15px 0px 15px 0px;
     background-color: white; 
@@ -768,50 +759,38 @@ h2 {
     #activitesamarseille {
         margin-left: 40px;
     }    
-    
 }
 /**********************************************************/
-
-
-
 footer {
-    width: 1050px;
-    margin-left: -30px;
-    padding-bottom: 30px;
+    width: 100%;
+    margin-left: 0px;
+    padding-bottom: 0px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     background-color: #F2F2F2;
 }
-#apropos {
-    margin-right: 80px;
-    margin-left: 35px;
-    
 
+#apropos {
+padding-left: 135px;
 }
 
 #apropos a,#noshebergements a,#assistance a {
     font-family: 'Raleway', sans-serif;    
     font-size: 14px; 
     font-weight: lighter;
-
 }
 
 #apropos li,#noshebergements li,#assistance li {
     margin-bottom: 10px;
-
 }
 
 #noshebergements {
-    margin-right: 80px;
-    margin-left: 80px;
-    
-
+    margin-right: 0px;
+    margin-left: 140px;
 }
 #assistance {
-    margin-left: 80px;
-    
-
+    margin-left: 170px;
 }
 footer a
 {
@@ -821,32 +800,32 @@ footer a
     font-weight: bold;
     word-wrap: break-word;
     color: black;
-
-
-        
 }
 footer ul {
     list-style-type: none;
-    padding-left: 0px;
-    
-
+    padding-left: 0px;    
 }
 footer p {
     margin-left: 0;
 }
-
-
 /**********************************************************/
 @media all and (max-width: 768px) {
     footer {
         display: flex;
         flex-direction: column;
         margin-top: 0px;
-        
     }
 
     #apropos {
-        margin-left: 80px;
+        padding-left: 45px;
     }
-
+    #noshebergements {
+        margin-left: 0px;
+        padding-left: 45px;
+    }
+    #assistance {
+        margin-left: 0px;
+        padding-left: 45px;
+    }    
 }
+
